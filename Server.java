@@ -1,18 +1,10 @@
-// javac Server.java && java Server [port=8080] [host=127.0.0.1]
-
 import java.net.*;
 import java.io.*;
 
 public class Server {
   public static void main(String[] argv) throws IOException {
-    String host = "127.0.0.1";
+    String host = "0.0.0.0";
     short port = 8080;
-
-    if(argv.length >= 2)
-      host = argv[1];
-
-    if(argv.length >= 1)
-      port = Short.parseShort(argv[0]);
 
     ServerSocket server = null;
 
