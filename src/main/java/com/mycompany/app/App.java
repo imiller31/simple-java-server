@@ -1,15 +1,20 @@
-import java.net.*;
-import java.io.*;
+package com.mycompany.app;
 
-public class Server {
-  public static void main(String[] argv) throws IOException {
+import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class App 
+{
+    public static void main(String[] argv) throws IOException {
     String host = "0.0.0.0";
     short port = 8080;
 
     ServerSocket server = null;
 
     try {
-      server = new ServerSocket(port, 0, InetAddress.getByName(host));
+      server = new ServerSocket(port);
 
       System.err.println("Server listening on " + host + ":" + port + "\n");
       int read;
